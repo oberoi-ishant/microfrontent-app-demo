@@ -3,6 +3,7 @@ import { Switch, Route, Router } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
+// Production Prefix for CSS class names
 const prodPrefixClassName = createGenerateClassName({
   productionPrefix: 'au'
 });

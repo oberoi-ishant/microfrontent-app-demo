@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import Subscribe from './components/Subscribe';
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
+// Production Prefix for CSS class names
 const prodPrefixClassName = createGenerateClassName({
   productionPrefix: 'pr'
 });

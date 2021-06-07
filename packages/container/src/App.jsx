@@ -7,6 +7,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 
+// Production Prefix for CSS class names
 const prodPrefixClassName = createGenerateClassName({
   productionPrefix: 'co'
 });
