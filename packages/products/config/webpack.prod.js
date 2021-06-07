@@ -11,9 +11,6 @@ const prodConfig = {
     publicPath: '/products/latest/'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html'
-    }),
     new ModuleFederationPlugin({
       name: 'products',
       filename: 'productsRemoteEntry.js',

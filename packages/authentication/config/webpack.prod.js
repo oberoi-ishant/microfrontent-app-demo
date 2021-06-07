@@ -11,9 +11,6 @@ const prodConfig = {
     publicPath: '/authentication/latest/'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html'
-    }),
     new ModuleFederationPlugin({
       name: 'authentication',
       filename: 'authenticationRemoteEntry.js',

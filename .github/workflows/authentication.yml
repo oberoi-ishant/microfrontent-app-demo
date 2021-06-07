@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'packages/authentication/**' # when change occurs on master branch inside path authentication folder
+      - 'packages/authentication/**' # when change occurs on master branch inside path auth folder
 
 defaults:
   run:
@@ -25,6 +25,9 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      # Whenever we update the contents of a file whose name remains same, cloudFront will not pick up
+      # the changes. Hence we need to invalidate the distribution and give name of the files to invalidate
+      # here, since we will use auth remoteEntry.js in container everytime, therefore we need to invalidate this.
       - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/authentication/latest/authenticationRemoteEntry.js"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

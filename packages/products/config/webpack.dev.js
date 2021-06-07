@@ -16,9 +16,6 @@ const devConfig = {
     publicPath: 'http://localhost:8081/'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './public/index.html'
-    }),
     new ModuleFederationPlugin({
       name: 'products',
       filename: 'productsRemoteEntry.js',
@@ -26,6 +23,9 @@ const devConfig = {
         './ProductsApp': './src/bootstrap'
       },
       shared: packageJson.dependencies
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
     })
   ]
 };
