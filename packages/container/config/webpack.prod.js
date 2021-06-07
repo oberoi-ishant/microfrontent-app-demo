@@ -4,16 +4,13 @@ const commonConfig = require('./webpack.common');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const packageJson = require('../package.json');
 
+const PROD_DOMAIN = process.env.PRODUCTION_DOMAIN;
+
 const prodConfig = {
   mode: "production",
-  devServer: {
-    port: 8080,
-    historyApiFallback: {
-      index: '/index.html'
-    }
-  },
   output: {
-    publicPath: 'http://localhost:8080/'
+    filename: '[name].[contenthash].js',
+    publicPath: '/container/latest/'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -22,9 +19,9 @@ const prodConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        products: 'products@http://localhost:8081/productsRemoteEntry.js',
-        authentication: `authentication@http://localhost:8082/authenticationRemoteEntry.js`,
-        dashboard: 'dashboard@http://localhost:8083/DashboardRemoteEntry.js'
+        products: `products@${PROD_DOMAIN}/productsRemoteEntry.js`,
+        authentication: `authentication@${PROD_DOMAIN}/authenticationRemoteEntry.js`,
+        dashboard: `dashboard@${PROD_DOMAIN}/dashboardRemoteEntry.js`
       },
       shared: packageJson.dependencies
     })

@@ -6,15 +6,9 @@ const packageJson = require('../package.json');
 
 const prodConfig = {
   mode: "production",
-  devServer: {
-    port: 8081,
-    historyApiFallback: {
-      index: '/index.html'
-    }
-  },
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: 'http://localhost:8081/'
+    publicPath: '/products/latest/'
   },
   plugins: [
     new HtmlWebpackPlugin({

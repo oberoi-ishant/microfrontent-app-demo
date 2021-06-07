@@ -8,13 +8,7 @@ const prodConfig = {
   mode: "production",
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: 'http://localhost:8082/'
-  },
-  devServer: {
-    port: 8082,
-    historyApiFallback: {
-      index: '/index.html'
-    }
+    publicPath: '/authentication/latest/'
   },
   plugins: [
     new HtmlWebpackPlugin({
