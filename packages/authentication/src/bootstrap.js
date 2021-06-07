@@ -30,7 +30,7 @@ const mount = (el, { defaultHistory, updateContainerHistory, initialPath, onSign
 };
 
 const environment = process.env.NODE_ENV;
-// if (environment === 'development') {
+if (environment === 'development') {
   const localEl = document.getElementById('_local_authentication_');
   if (localEl) {
     mount(localEl, {
@@ -38,7 +38,7 @@ const environment = process.env.NODE_ENV;
       defaultHistory: createBrowserHistory()
     });
   }
-// }
+}
 
 export {
   mount
