@@ -28,7 +28,7 @@ const mount = (el, { defaultHistory, updateContainerHistory, initialPath }) => {
 };
 
 const environment = process.env.NODE_ENV;
-if (environment === 'development') {
+// if (environment === 'development') {
   const localEl = document.getElementById('_local_products_');
   if (localEl) {
     mount(localEl, {
@@ -36,7 +36,7 @@ if (environment === 'development') {
       defaultHistory: createBrowserHistory()
     });
   }
-}
+// }
 
 export {
   mount

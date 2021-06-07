@@ -8,13 +8,13 @@ const mount = (el) => {
 };
 
 // In isolation call mount immediately
-if (process.env.NODE_ENV === 'development') {
+// if (process.env.NODE_ENV === 'development') {
   const devRoot = document
     .getElementById('_local_dashboard_');
   if (devRoot) {
     mount(devRoot); // When running in isolation/dev mode we can use BrowserHistory
   }
-}
+// }
 
 // Running through container, export mount function.
 // Let container decide when to call mount.
