@@ -5,19 +5,10 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const prodConfig = {
-  devServer: {
-    port: 8083,
-    historyApiFallback: {
-      index: '/index.html'
-    },
-    headers: { /** to load some fonts when loaded from container */
-      'Access-Control-Allow-Origin': '*'
-    }
-  },
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: 'http://localhost:8083/'
+    publicPath: '/dashboard/latest/'
   },
   plugins: [
     new ModuleFederationPlugin({
