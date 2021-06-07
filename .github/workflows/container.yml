@@ -9,7 +9,7 @@ on:
 
 defaults:
   run:
-    workind-directory: packages/container
+    working-directory: packages/container
 
 jobs:
   build:
