@@ -15,6 +15,7 @@ const devConfig = {
       index: '/index.html'
     }
   },
+  devtool: 'eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html'

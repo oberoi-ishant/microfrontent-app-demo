@@ -15,6 +15,7 @@ const devConfig = {
       'Access-Control-Allow-Origin': '*'
     }
   },
+  devtool: 'eval-source-map',
   output: {
     publicPath: 'http://localhost:8083/'
   },

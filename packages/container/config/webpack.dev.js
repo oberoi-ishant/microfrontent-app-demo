@@ -11,6 +11,7 @@ const devConfig = {
       index: '/index.html'
     }
   },
+  devtool: 'eval-source-map',
   output: {
     publicPath: 'http://localhost:8080/'
   },
