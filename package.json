@@ -1,0 +1,16 @@
+{
+  "name": "micro-frontend-demo",
+  "version": "1.0.0",
+  "description": "micro-frontenf app using webpack 5 module federation plugin",
+  "main": "index.js",
+  "repository": "git@github.com:oberoi-ishant/microfrontent-app-demo.git",
+  "author": "ubo.oberoi@gmail.com",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}

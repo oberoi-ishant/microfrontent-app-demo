@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 # checkout the code in the virtual machine
-      - run: npm install
-      - run: npm run build
+      - run: yarn install
+      - run: yarn run build
         env:
           PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
 

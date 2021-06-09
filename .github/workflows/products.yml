@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2 # checkout the code in the virtual machine
-      - run: npm install
-      - run: npm run build
+      - run: yarn install
+      - run: yarn run build
 
       - uses: shinyinc/action-aws-cli@v1.2 # deploy to aws using aws cli
       - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/products/latest
