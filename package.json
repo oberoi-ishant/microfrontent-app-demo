@@ -10,6 +10,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start": "lerna run start --stream",
+    "prod": "lerna run prod --stream"
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "@babel/core": "^7.14.3",
