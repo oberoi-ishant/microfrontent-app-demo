@@ -8,7 +8,7 @@ const buildConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: '/dashboard/latest/'
+    publicPath: '/dashboard/v2/'
   },
   plugins: [
     new ModuleFederationPlugin({

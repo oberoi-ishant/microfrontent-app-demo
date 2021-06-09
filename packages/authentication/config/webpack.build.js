@@ -7,7 +7,7 @@ const buildConfig = {
   mode: "production",
   output: {
     filename: '[name].[contenthash].js',
-    publicPath: '/authentication/latest/'
+    publicPath: '/authentication/v2/'
   },
   plugins: [
     new ModuleFederationPlugin({
