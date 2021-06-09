@@ -18,7 +18,7 @@
       <div class="card summary">
         <span class="title">Revenue</span>
         <span class="detail">Income for today</span>
-        <span class="count revenue">$3,200</span>
+        <span class="count revenue">&#8377;3,200</span>
       </div>
     </div>
 
@@ -135,14 +135,14 @@
           <li>
             <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
               <h5 class="activity p-m-0">Income</h5>
-              <div class="count">$900</div>
+              <div class="count">&#8377;900</div>
             </div>
             <ProgressBar :value="95" :showValue="false" />
           </li>
           <li>
             <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
               <h5 class="activity p-m-0">Tax</h5>
-              <div class="count" style="background-color: #f9c851">$250</div>
+              <div class="count" style="background-color: #f9c851">&#8377;250</div>
             </div>
             <ProgressBar :value="24" :showValue="false" />
           </li>
