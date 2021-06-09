@@ -3,7 +3,7 @@ name: deploy-products
 on:
   push:
     branches:
-      - master
+      - v2
     paths:
       - 'packages/products/**' # when change occurs on master branch inside path authentication folder
 
@@ -21,11 +21,11 @@ jobs:
       - run: yarn run build
 
       - uses: shinyinc/action-aws-cli@v1.2 # deploy to aws using aws cli
-      - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/products/latest
+      - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/products/v2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/products/latest/productsRemoteEntry.js"
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/products/v2/productsRemoteEntry.js"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
