@@ -86,7 +86,7 @@ export default function SignIn({ onSignIn }) {
             className={classes.submit}
             onClick={onSignIn}
           >
-            Sign In
+            Log In
           </Button>
         </form>
       </div>

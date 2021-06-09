@@ -54,7 +54,7 @@ const tiers = [
       'Alway on display',
       'Long battery life'
     ],
-    buttonText: 'Sign up now',
+    buttonText: 'Log In',
     buttonVariant: 'outlined',
   },
   {
@@ -66,7 +66,7 @@ const tiers = [
       'Long battery life',
       'Flaunt it!!',
     ],
-    buttonText: 'Sign Up',
+    buttonText: 'Log In',
     buttonVariant: 'contained',
   },
   {
@@ -78,7 +78,7 @@ const tiers = [
       'Long battery life',
       'Exclusive member benefits!',
     ],
-    buttonText: 'Sign Up',
+    buttonText: 'Log In',
     buttonVariant: 'outlined',
   },
 ];

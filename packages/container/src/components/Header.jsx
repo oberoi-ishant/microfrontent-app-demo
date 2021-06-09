@@ -54,7 +54,7 @@ export default function Header({ isSignedIn, onSignOut }) {
             component={Link}
             to="/"
           >
-            Home
+            App
           </Typography>
           <Button
             color="primary"
