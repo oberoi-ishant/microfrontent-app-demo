@@ -11,8 +11,8 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "lerna run start --stream",
-    "prod": "lerna run prod --stream"
+    "start": "lerna run start --parallel",
+    "prod": "lerna run prod --parallel"
   },
   "devDependencies": {
     "lerna": "^4.0.0",
