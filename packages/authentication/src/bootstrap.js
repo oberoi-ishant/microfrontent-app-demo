@@ -29,16 +29,12 @@ const mount = (el, { defaultHistory, updateContainerHistory, initialPath, onSign
   }
 };
 
-const environment = process.env.NODE_ENV;
-// if (environment === 'development') {
-  const localEl = document.getElementById('_local_authentication_');
-  if (localEl) {
-    mount(localEl, {
-      // Standlone mode use memoryHistory
-      defaultHistory: createBrowserHistory()
-    });
-  }
-// }
+const localEl = document.getElementById('_local_authentication_');
+if (localEl) {
+  mount(localEl, {
+    defaultHistory: createBrowserHistory()
+  });
+}
 
 export {
   mount

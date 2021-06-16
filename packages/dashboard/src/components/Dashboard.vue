@@ -2,74 +2,56 @@
   <div class="p-grid p-fluid dashboard">
     <div class="p-col-12 p-lg-4">
       <div class="card summary">
-        <span class="title">Users</span>
-        <span class="detail">Number of visitors</span>
-        <span class="count visitors">12</span>
+        <span class="title">Subscribers</span>
+        <span class="detail">Number of subscribers</span>
+        <span class="count visitors">234890</span>
       </div>
     </div>
     <div class="p-col-12 p-lg-4">
       <div class="card summary">
-        <span class="title">Sales</span>
-        <span class="detail">Number of purchases</span>
-        <span class="count purchases">534</span>
+        <span class="title">Stocks</span>
+        <span class="detail">Number of shares</span>
+        <span class="count purchases">7680</span>
       </div>
     </div>
     <div class="p-col-12 p-lg-4">
       <div class="card summary">
-        <span class="title">Revenue</span>
-        <span class="detail">Income for today</span>
-        <span class="count revenue">&#8377;3,200</span>
+        <span class="title">Profit</span>
+        <span class="detail">Expense</span>
+        <span class="count revenue">&#8377;567878</span>
       </div>
     </div>
 
     <div class="p-col-12 p-md-6 p-lg-4">
-      <Panel header="Tasks" style="height: 100%">
+      <Panel header="Activity" style="height: 100%">
         <ul class="task-list">
           <li>
-            <Checkbox name="task" value="reports" v-model="tasksCheckbox" />
-            <span class="task-name">Sales Reports</span>
-            <i class="pi pi-chart-bar" />
+            <Checkbox name="task" value="OKRs" v-model="tasksCheckbox" />
+            <span class="task-name">Set OKRs</span>
           </li>
           <li>
-            <Checkbox name="task" value="invoices" v-model="tasksCheckbox" />
-            <span class="task-name">Pay Invoices</span>
-            <i class="pi pi-dollar" />
+            <Checkbox name="task" value="Self" v-model="tasksCheckbox" />
+            <span class="task-name">Self Review</span>
           </li>
           <li>
-            <Checkbox name="task" value="dinner" v-model="tasksCheckbox" />
-            <span class="task-name">Dinner with Tony</span>
-            <i class="pi pi-user" />
+            <Checkbox name="task" value="Peer" v-model="tasksCheckbox" />
+            <span class="task-name">Peer Review</span>
           </li>
           <li>
-            <Checkbox name="task" value="meeting" v-model="tasksCheckbox" />
-            <span class="task-name">Client Meeting</span>
-            <i class="pi pi-users" />
+            <Checkbox name="task" value="Manager" v-model="tasksCheckbox" />
+            <span class="task-name">Manager Discussion</span>
           </li>
           <li>
-            <Checkbox name="task" value="theme" v-model="tasksCheckbox" />
-            <span class="task-name">New Theme</span>
-            <i class="pi pi-globe" />
-          </li>
-          <li>
-            <Checkbox name="task" value="flight" v-model="tasksCheckbox" />
-            <span class="task-name">Flight Ticket</span>
-            <i class="pi pi-briefcase" />
+            <Checkbox name="task" value="Surprise" v-model="tasksCheckbox" />
+            <span class="task-name">Surprise</span>
           </li>
         </ul>
       </Panel>
     </div>
 
     <div class="p-col-12 p-md-6 p-lg-4 p-fluid contact-form">
-      <Panel header="Contact Us">
+      <Panel header="Lets Connect">
         <div class="p-grid">
-          <div class="p-col-12">
-            <Dropdown
-              v-model="dropdownCity"
-              :options="dropdownCities"
-              optionLabel="name"
-              placeholder="Select a City"
-            />
-          </div>
           <div class="p-col-12">
             <InputText type="text" placeholder="Name" />
           </div>
@@ -80,53 +62,19 @@
             <InputText type="text" placeholder="Message" />
           </div>
           <div class="p-col-12">
-            <Button type="button" label="Send" icon="pi pi-envelope" />
+            <Button type="button" label="Email" />
           </div>
         </div>
       </Panel>
     </div>
 
-    <!-- <div class="p-col-12 p-lg-4 contacts">
-      <Panel header="Contacts">
-        <ul>
-          <li>
-            <button class="p-link">
-              <span class="name">Claire Williams</span>
-              <span class="email">clare@primevue.com</span>
-            </button>
-          </li>
-          <li>
-            <button class="p-link">
-              <span class="name">Jason Dourne</span>
-              <span class="email">jason@primevue.com</span>
-            </button>
-          </li>
-          <li>
-            <button class="p-link">
-              <span class="name">Jane Davidson</span>
-              <span class="email">jane@primevue.com</span>
-            </button>
-          </li>
-          <li>
-            <button class="p-link">
-              <span class="name">Tony Corleone</span>
-              <span class="email">tony@primevue.com</span>
-            </button>
-          </li>
-        </ul>
-      </Panel>
-    </div> -->
-
     <div class="p-col-12 p-lg-4">
-      <Panel header="Activity" style="height: 100%">
+      <Panel header="History" style="height: 100%">
         <div class="activity-header">
           <div class="p-grid">
             <div class="p-col-6">
-              <span style="font-weight: bold">Last Activity</span>
-              <p>Updated 1 minute ago</p>
-            </div>
-            <div class="p-col-6" style="text-align: right">
-              <Button label="Refresh" icon="pi pi-refresh" />
+              <span style="font-weight: bold">Last Login</span>
+              <p>2 hours ago</p>
             </div>
           </div>
         </div>
@@ -134,15 +82,8 @@
         <ul class="activity-list">
           <li>
             <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
-              <h5 class="activity p-m-0">Income</h5>
-              <div class="count">&#8377;900</div>
-            </div>
-            <ProgressBar :value="95" :showValue="false" />
-          </li>
-          <li>
-            <div class="p-d-flex p-jc-between p-ai-center p-mb-3">
-              <h5 class="activity p-m-0">Tax</h5>
-              <div class="count" style="background-color: #f9c851">&#8377;250</div>
+              <h5 class="activity p-m-0">Income Tax</h5>
+              <div class="count" style="background-color: #efefef">&#8377;307014</div>
             </div>
             <ProgressBar :value="24" :showValue="false" />
           </li>
@@ -152,7 +93,7 @@
 
     <div class="p-col-12 p-lg-6">
       <div class="card">
-        <h1 style="font-size: 16px">Recent Sales</h1>
+        <h1 style="font-size: 16px">Data Matrix</h1>
         <DataTable
           :value="products"
           class="p-datatable-customers"
@@ -161,7 +102,7 @@
           :paginator="true"
         >
           <Column>
-            <template #header> Logo </template>
+            <template #header> Symbol </template>
             <template #body="slotProps">
               <img
                 :src="'assets/layout/images/product/' + slotProps.data.image"
@@ -170,8 +111,8 @@
               />
             </template>
           </Column>
-          <Column field="name" header="Name" :sortable="true"></Column>
-          <Column field="category" header="Category" :sortable="true"></Column>
+          <Column field="name" header="Explorer" :sortable="true"></Column>
+          <Column field="category" header="Description" :sortable="true"></Column>
           <Column field="price" header="Price" :sortable="true">
             <template #body="slotProps">
               {{ formatCurrency(slotProps.data.price) }}
@@ -269,14 +210,14 @@ export default {
             label: 'First Dataset',
             data: [65, 59, 80, 81, 56, 55, 40],
             fill: false,
-            backgroundColor: '#2f4860',
+            backgroundColor: '#ebebeb',
             borderColor: '#2f4860',
           },
           {
             label: 'Second Dataset',
             data: [28, 48, 40, 19, 86, 27, 90],
             fill: false,
-            backgroundColor: '#00bb7e',
+            backgroundColor: '#00ee21',
             borderColor: '#00bb7e',
           },
         ],
@@ -541,15 +482,15 @@ $footerBgColor: #ffffff;
       border-radius: $borderRadius;
 
       &.visitors {
-        background-color: #20d077;
+        background-color: #ebebeb;
       }
 
       &.purchases {
-        background-color: #f9c851;
+        background-color: #111122;
       }
 
       &.revenue {
-        background-color: #007be5;
+        background-color: #002211;
       }
     }
   }
